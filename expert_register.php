@@ -66,7 +66,7 @@
         $state->bindValue(':phone', $_POST['phone']);
         $state->bindValue(':email', $_POST['email']);
         $state->execute();
-        include('home.php');
+        include('index.php');
     } else {
         include('expert_form.php');
     }
