@@ -7,6 +7,12 @@
     font-family: 'Modeka';
     src: url(./fonts/modeka-webfont.woff) format('woff');
 }
+
+@font-face{
+    font-family: 'Orson';
+    src: url(./fonts/sf_orson_casual_heavy-webfont.woff) format('woff');
+}
+
 body{
     font-family: 'Orson';
     width: auto;

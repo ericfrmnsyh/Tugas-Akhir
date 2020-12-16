@@ -3,13 +3,13 @@ if (isset($_POST['login'])) {
 	function checkPassword($username, $password)
 	{
 		$dbc = new PDO('mysql:host=localhost;dbname=forum', 'root', '');
-		$query = $dbc->prepare("SELECT * FROM expert WHERE username = :username AND password = SHA2(:password, 0)");
+		$query = $dbc->prepare("SELECT * FROM expert WHERE expert_username = :username AND expert_password = SHA2(:pass, 0)");
 		$query->bindValue(':username', $_POST['username']);
-		$query->bindValue(':password', $_POST['password']);
+		$query->bindValue(':pass', $_POST['pass']);
 		$query->execute();
 		return $query->rowCount() > 0;
 	}
-	if (checkPassword($_POST['username'], $_POST['password'])) {
+	if (checkPassword($_POST['username'], $_POST['pass'])) {
 		session_start();
 		$_SESSION['isAdmin'] = true;
 		header('Location: http://localhost/Tugas Akhir/index.php');

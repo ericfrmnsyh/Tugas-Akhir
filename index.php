@@ -28,9 +28,10 @@
 	</header>
 	<main>
 		<?php
-        echo "Ini Index";
 		if (!isset($_SESSION['isAdmin'])) {
 			include 'home.inc';
+		} else{
+			echo "Ini Index";
 		}
 		?>
 	</main>

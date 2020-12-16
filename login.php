@@ -3,7 +3,7 @@ if (isset($_POST['login'])) {
     function checkPassword($username, $password)
     {
         $dbc = new PDO('mysql:host=localhost;dbname=forum', 'root', '');
-        $query = $dbc->prepare("SELECT * FROM user WHERE username = :username AND password = SHA2(:pass, 0)");
+        $query = $dbc->prepare("SELECT * FROM user WHERE user_username = :username AND user_password = SHA2(:pass, 0)");
         $query->bindValue(':username', $_POST['username']);
         $query->bindValue(':pass', $_POST['pass']);
         $query->execute();

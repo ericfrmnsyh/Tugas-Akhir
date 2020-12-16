@@ -24,11 +24,11 @@ if (isset($_POST['logout'])) {
 	</header>
 	<main>
 		<fieldset>
-			<legend>Logged Out</legend>
+			<legend>Signed Out</legend>
 			<div class='form'>
 				<form action="logout.php" method="POST">
 					<div class="button">
-						<input name='logout' type="submit" class="kontrol-form" value="LOGOUT"/>
+						<input name='logout' type="submit" class="kontrol-form" value="SIGN OUT"/>
 						<input name='cancel' type="submit" class="kontrol-form" value="CANCEL"/>
 					</div>
 				</form>

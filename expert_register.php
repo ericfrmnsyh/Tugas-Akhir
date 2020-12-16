@@ -11,7 +11,7 @@
 		function checkUser($username)
 		{
 			$dbc = new PDO('mysql:host=localhost;dbname=forum','root','');
-			$query = $dbc->prepare("SELECT * FROM expert WHERE username = :username");
+			$query = $dbc->prepare("SELECT * FROM expert WHERE expert_username = :username");
 			$query->bindValue(':username', $_POST['username']);
 			$query->execute();
 			return $query->rowCount() > 0;
@@ -60,7 +60,7 @@
     }
 
     if (empty($username_error) && empty($email_error) && empty($hp_error) && empty($pass_error) && empty($confirm_error)) {
-        $state = $dbc->prepare("INSERT INTO expert (username,password,phone,email) VALUES (:username,SHA2(:pass,0),:phone,:email)");
+        $state = $dbc->prepare("INSERT INTO expert (expert_username,expert_password,expert_phone,expert_email) VALUES (:username,SHA2(:pass,0),:phone,:email)");
         $state->bindValue(':username', $_POST['username']);
         $state->bindValue(':pass', $_POST['pass']);
         $state->bindValue(':phone', $_POST['phone']);

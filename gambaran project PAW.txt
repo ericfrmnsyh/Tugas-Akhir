@@ -1,0 +1,26 @@
+Expert: 
+yang belum terjawab (kosong) berada paling atas
+
+Tabel diskusi: 
+- id diskusi
+- id user
+- id expert yang jawab
+- Pertanyaan
+- Jawaban
+- tanggal
+
+User: Tampilan paling atas punya user sendiri (penanya)
+
+
+Diagram Activity
+https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/
+
+
+Estimasi:
+Minggu (13 Desember) : Konsep udah jadi
+
+
+
+Tampilan awal: Berisi tentang tatacara pengaplikasian atau penggunaan forum diskusi
+
+Diskusi dapat dilihat oleh user yang sudah login atau expert yang sudah terdaftar
